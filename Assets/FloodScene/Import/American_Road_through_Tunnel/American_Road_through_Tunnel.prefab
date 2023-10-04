@@ -438,8 +438,9 @@ GameObject:
   - component: {fileID: 8408194705653847128}
   - component: {fileID: 2852391498587404219}
   - component: {fileID: 1892970510371052066}
+  - component: {fileID: 7855064187583661139}
   m_Layer: 0
-  m_Name: Material2
+  m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,6 +511,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7855064187583661139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443033227457585138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 360, y: 6635.5137, z: 157.42725}
+  m_Center: {x: 17.39003, y: -207.73584, z: -95.907364}
 --- !u!1 &3807413833201439190
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +983,7 @@ GameObject:
   - component: {fileID: 4239043692209381221}
   - component: {fileID: 4014382811289147883}
   m_Layer: 0
-  m_Name: Material2
+  m_Name: Sidewalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
