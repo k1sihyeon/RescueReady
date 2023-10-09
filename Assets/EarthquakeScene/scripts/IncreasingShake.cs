@@ -13,8 +13,8 @@ public class IncreasingShake : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        Camera_Shake.intensity = 7;
-        Camera_Shake.duration = Camera_Shake.duration + 5;
+        Camera_Shake.intensity = 2;
+        Camera_Shake.duration = Camera_Shake.duration + 3;
         CameraShake_Scrpit.Shake();
         Debug.Log("∂•ø° ¥Í¿Ω");
         
