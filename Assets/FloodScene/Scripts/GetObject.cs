@@ -5,27 +5,46 @@ using UnityEngine;
 public class GetObject : MonoBehaviour
 {
 
-    public Camera getCamera;
-    private RaycastHit hit;
+    private Collider[] colls;
+    private Collider hammer;
+    [SerializeField] private float searchRange;
+    private bool flag;
 
     // Start is called before the first frame update
     void Start()
     {
-        getCamera = GetComponent<Camera>();
+        searchRange = 5.0f;
+        flag = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (flag)
         {
-            Ray ray = getCamera.ScreenPointToRay(Input.mousePosition);
-
-            if(Physics.Raycast(ray, out hit))
+            colls = Physics.OverlapSphere(transform.position, searchRange);
+            for (int i = 0; i < colls.Length; i++)
             {
-                string objectName = hit.collider.gameObject.name;
-                Debug.Log(objectName);
+                if (colls[i].name == "Hammer")
+                {
+                    //UI·Î Ç¥Çö ÇÊ¿ä
+                    hammer = colls[i];
+                    Debug.Log("E¸¦ ´­·¯ Å»Ãâ¿ë ¸ÁÄ¡¸¦ È¹µæÇÏ¼¼¿ä");
+                    flag = false;
+                }
             }
         }
+
+        if(!flag)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(hammer);
+                Debug.Log("Å»Ãâ¿ë ¸ÁÄ¡ È¹µæ");
+                //¸ÁÄ¡ µé°í ÀÖ´Â°Å Ã³·³ È­¸é
+            }
+        }
+        
+
     }
 }
