@@ -8,18 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SkyCarBodyWhite
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: bf441677c1d116a4db41bfae35e07c16, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
+  - _EMISSION
   - _MASKMAP
   - _MATERIAL_FEATURE_SPECULAR_COLOR
   - _NORMALMAP
   - _NORMALMAP_TANGENT_SPACE
-  m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
   - TransparentDepthPrepass
@@ -51,6 +52,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -96,6 +101,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: 5278c745356fd6b479449d9b4809ecb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -205,7 +214,9 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
+    - _GlossMapScale: 1
     - _Glossiness: 0.15
+    - _GlossyReflections: 1
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -240,11 +251,14 @@ Material:
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
+    - _Shininess: 0.078125
     - _Smoothness: 0.15
     - _SmoothnessRemapMax: 0.15
     - _SmoothnessRemapMin: 0
+    - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
+    - _SpecularHighlights: 1
     - _SpecularOcclusionMode: 1
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -292,6 +306,7 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _SpecColor: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 1}
     - _SpecularColor: {r: 0.09803919, g: 0.09803919, b: 0.09803919, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
